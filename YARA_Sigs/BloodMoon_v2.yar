@@ -72,8 +72,8 @@ rule bloodmoon_v2_implant {
         version = "1.0"
 
     strings:
-        $b =  { E8 00 00 00 00 59 49 89 C8 48 81 C1 23 0B 00 00 BA 40 D8 24 E1 }     // sRDI stub
-        $b2 = { 80 34 30 ?? 48 FF C0 48 3D ?? ?? ?? ?? }                           // XOR Decrypt
+        $b =  { E8 00 00 00 00 59 49 89 C8 48 81 C1 23 0B 00 00 BA 40 D8 24 E1 }    // sRDI stub
+        $b2 = { 80 34 30 ?? 48 FF C0 48 3D ?? ?? ?? ?? }                            // XOR Decrypt
         $b3 = { 48 89 5C 24 10 48 89 74 24 18 55 57 41 54 }                         // HTTP/C2 Module
         $b4 = { B8 50 50 50 50 09 19 D9 }                                           // Encrypted module (unk_18000B460)
     
