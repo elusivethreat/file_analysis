@@ -35,7 +35,7 @@ rule screencapture_module {
         $a4 = "GdiplusShutdown"
         $a5 = "M.blog"
         $a6 = { 48 89 7C 24 38 48 8d 4C 24 28 E8 04 F8 ?? ?? B9 60 EA 00 00 } // call screen_shot -> sleep
-		$a7 = "MSTeams_Support_01_17"
+        $a7 = "MSTeams_Support_01_17"
 
 
     condition:
@@ -52,9 +52,9 @@ rule lunar_transport_v1 {
     
     strings:
         $a = "\\AppData\\Local\\Microsoft\\Teams\\current\\ffmpeg.dat"	// Encrypted shellcode
-		$a2 = "CreateFileA"
-		$a3 = "GetFileSize"
-		$a4 = "ReadFile"
+        $a2 = "CreateFileA"
+        $a3 = "GetFileSize"
+        $a4 = "ReadFile"
 		//$a4 = { 80 34 30 ?? 48 FF C0 48 3D ?? ?? ?? ?? } 				// XOR Decrypt
 		
     condition:
@@ -74,9 +74,9 @@ rule bloodmoon_v2_implant {
 
     strings:
         $b = { E8 00 00 00 00 59 49 89 C8 48 81 C1 23 0B 00 00 BA 40 D8 24 E1 }   // sRDI stub
-		$b2 =  { 80 34 30 ?? 48 FF C0 48 3D ?? ?? ?? ?? }						  // XOR Decrypt
+        $b2 =  { 80 34 30 ?? 48 FF C0 48 3D ?? ?? ?? ?? }						  // XOR Decrypt
         $b3 = { 48 89 5C 24 10 48 89 74 24 18 55 57 41 54 } 					  // HTTP/C2 Module
-		$b4 = { B8 50 50 50 50 09 19 D9 }										  // Encrypted module (unk_18000B460)
+        $b4 = { B8 50 50 50 50 09 19 D9 }										  // Encrypted module (unk_18000B460)
     
     condition:
         all of ($b*)
